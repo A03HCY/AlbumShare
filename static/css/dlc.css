@@ -1,6 +1,7 @@
 .mdui-appbar-with-searchbar {
   padding-top: 64px;
 }
+
 .search-bar {
   display: flex;
   height: 45px;
@@ -9,9 +10,11 @@
   border-radius: 5px;
   border-style: solid;
   border-width: 1px;
-  border-color: rgb(233, 233, 233);;
+  border-color: rgb(233, 233, 233);
+  ;
 }
-.search-bar > input {
+
+.search-bar>input {
   flex: 1 1;
   height: 100%;
   padding: 0;
@@ -24,28 +27,63 @@
   outline: none;
   color: rgba(0, 0, 0, .87);
 }
-.search-bar > input::placeholder {
+
+.search-bar>input::placeholder {
   color: rgba(0, 0, 0, .54);
 }
-.search-bar > .mdui-icon {
+
+.search-bar>.mdui-icon {
   margin: 0 16px;
 }
-.search-bar > .mdui-btn-icon {
+
+.search-bar>.mdui-btn-icon {
   margin: auto 11px;
 }
+
 /*暗色模式支持*/
 .mdui-theme-layout-dark .search-bar {
   background: #424242;
-  border-color: rgb(112, 112, 112);;
+  border-color: rgb(112, 112, 112);
+  ;
 }
-.mdui-theme-layout-dark .search-bar > input {
+
+.mdui-theme-layout-dark .search-bar>input {
   color: white;
 }
-.mdui-theme-layout-dark .search-bar > input::placeholder {
+
+.mdui-theme-layout-dark .search-bar>input::placeholder {
   color: rgba(255, 255, 255, .70);
 }
 
+.image-box {
+  margin: auto;
+}
 
+.image-show>img {
+  width: 100%;
+  break-inside: avoid; 
+}
+
+@media (max-width: 599.9px) {
+  .image-show {
+    column-count: 3;
+    column-gap: 2px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1023.9px) {
+  .image-show {
+    column-count: 4;
+    column-gap: 4px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .image-show {
+    column-count: 5;
+    column-gap: 5px;
+  }
+}
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -55,24 +93,18 @@
 ::-webkit-scrollbar-track {
   width: 6px;
   background: rgba(#101F1C, 0.1);
-  -webkit-border-radius: 2em;
-  -moz-border-radius: 2em;
-  border-radius: 2em;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(144,147,153,.3);
+  background-color: rgba(144, 147, 153, .3);
   background-clip: padding-box;
   min-height: 28px;
-  -webkit-border-radius: 2em;
-  -moz-border-radius: 2em;
-  border-radius: 2em;
   transition: background-color .3s;
   cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(144,147,153,.5);
+  background-color: rgba(144, 147, 153, .5);
 }
 
 @media (max-width: 340px) {
@@ -82,5 +114,5 @@
 }
 
 .dlc-em {
-  text-indent:2em;
+  text-indent: 2em;
 }
